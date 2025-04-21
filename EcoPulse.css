@@ -1,21 +1,35 @@
+
+* { /* resetando o css para config padrão*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+   
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  
+  
 .texto-centro {
     text-align: center;
     display: block;
 }
 
 #creation-ecoscore {
-    border: 3px solid black;
+    
     padding: 40px;
-    background-color: #f9f9f9; /* tom claro pra destacar o botão */
-    border-radius: 12px;
+    background-color: #f5eeee; /* tom claro pra destacar o botão */
 }
 
 #create-eco {
+    border: 3px solid rgb(0, 0, 0);
     display: block;
     margin: 30px auto 0;
     padding: 12px 24px;
     border-radius: 10px;
-    border: none;
+    
     background-color: #4CAF50;
     /* verde suave */
     color: white;
@@ -31,4 +45,11 @@
     /* verde mais escuro */
     transform: scale(1.05);
     /* efeito de leve crescimento ao passar o mouse */
+}
+
+.quebra{ /* quebra de linha de dois px ocupando 100% da largura e preta*/
+    height: 2px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border: none;
 }
