@@ -1,35 +1,51 @@
-
-* { /* resetando o css para config padrão*/
+* {
+    /* resetando o css para config padrão*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-   
-  }
+    box-sizing: border-box;
 
-  body {
+}
+
+body {
+    background-color: white;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-  
-  
-  
+    /* responsividade para mobile-first */
+}
+
+@media screen and (min-width: 700px) and (max-width: 1500px) {
+    body {
+        background-color: white;
+        /* responsividade para  dispositivos com tela de largura entre 700 e
+1500 pixels */
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    body {
+        background-color: white;
+        /* responsividade para  dispositivos com tela de largura maior que
+1500 pixels */
+    }
+}
+
 .texto-centro {
     text-align: center;
     display: block;
 }
 
-#creation-ecoscore {
-    
+.secao {
+
     padding: 40px;
-    background-color: #f5eeee; /* tom claro pra destacar o botão */
+    background-color: white
 }
 
-#create-eco {
+#btn-create {
     border: 3px solid rgb(0, 0, 0);
     display: block;
     margin: 30px auto 0;
     padding: 12px 24px;
     border-radius: 10px;
-    
+
     background-color: #4CAF50;
     /* verde suave */
     color: white;
@@ -40,16 +56,40 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#create-eco:hover {
+#btn-create:hover {
     background-color: #45a049;
     /* verde mais escuro */
     transform: scale(1.05);
     /* efeito de leve crescimento ao passar o mouse */
 }
 
-.quebra{ /* quebra de linha de dois px ocupando 100% da largura e preta*/
+.quebra {
+    /* quebra de linha de dois px ocupando 100% da largura e preta*/
     height: 2px;
     width: 100%;
     background-color: rgb(0, 0, 0);
     border: none;
+}
+
+#rodape {
+
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#globo {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#ecotitulo{
+    font-size: 4vw;
 }
