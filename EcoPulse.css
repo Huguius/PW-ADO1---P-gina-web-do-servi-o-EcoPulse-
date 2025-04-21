@@ -3,7 +3,59 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/*seção de criação EcoScore------------------------------------------------------------------------------*/
+#creation-ecoscore{
+    background-color : #f0eeee;
+}
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    flex-wrap: wrap; /* permite quebrar linha em telas muito pequenas */
+}
 
+#ecotitulo {
+    font-size: 4vw;
+}
+
+#globo {
+    height: 4vw;
+    width: auto;
+}
+
+/* 📱 Para telas com largura menor que 600px (ex: celular em pé) */
+@media (max-width: 600px) {
+    #ecotitulo {
+        font-size: 8vw; /* aumenta um pouco proporcionalmente */
+    }
+
+    #globo {
+        height: 8vw; /* acompanha o novo tamanho */
+    }
+
+    .logo-titulo {
+        flex-direction: row; /* mantém imagem e texto lado a lado */
+    }
+}
+
+/* 📲 Para telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
+    .logo-titulo {
+        flex-direction: column; /* empilha imagem em cima do texto */
+        gap: 1vw;
+    }
+
+    #ecotitulo {
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    #globo {
+        height: 9vw;
+        margin-bottom: 1vw;
+    }
 }
 
 body {
@@ -36,7 +88,7 @@ body {
 .secao {
 
     padding: 40px;
-    background-color: white
+    background-color: rgb(247, 247, 247)
 }
 
 #btn-create {
@@ -70,11 +122,19 @@ body {
     border: none;
 }
 
+/*FIM da seção de criação EcoScore-----------------------------------------------------------------------*/
+
+/*seção de descriação de serviço*/
+/*FIM da seção de de descriação de serviço---------------------------------------------------------------*/
+
+
+/*seção dos comentários----------------------------------------------------------------------------------*/
+
 #avaliações {
     padding: 40px;
-    background-color: #f0eeee;
-    text-align: center;
-    border-top: 2.5px solid #222;
+    background-color : #f0eeee;
+    text-align:center;
+    border-top:2.5px solid #222;
   }
   
   #avaliações  h2 {
@@ -128,7 +188,13 @@ body {
       flex: 1 1 100%;
     }
   }
+/*FIM da seção de comentários----------------------------------------------------------------------------*/
 
+/*seção de preços----------------------------------------------------------------------------------------*/
+/*FIM da seção de preços---------------------------------------------------------------------------------*/
+
+
+/*seção de rodape----------------------------------------------------------------------------------------*/
 #rodape{
     background-color: #000;
     color: #fff;
@@ -138,4 +204,4 @@ body {
     width: 100%;
     z-index: 1000;
 }
-  
+/*FIM da seção de rodapé---------------------------------------------------------------------------------*/
