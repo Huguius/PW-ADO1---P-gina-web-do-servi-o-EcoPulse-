@@ -1,29 +1,74 @@
+/* seção de css gerais */
 * {
     /* resetando o css para config padrão*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*seção de criação EcoScore------------------------------------------------------------------------------*/
-#creation-ecoscore{
+
+body {
+    background-color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* responsividade para mobile-first */
+}
+
+@media screen and (min-width: 700px) and (max-width: 1500px) {
+    body {
+        background-color: white;
+        /* responsividade para  dispositivos com tela de largura entre 700 e
+1500 pixels */
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    body {
+        background-color: white;
+        /* responsividade para  dispositivos com tela de largura maior que
+1500 pixels */
+    }
+}
+
+.secao {
+    padding: 40px;
     background-color : #f0eeee;
-}
-.logo-titulo {
+    text-align:center;
+    border-top:2.5px solid #222;
+  }
+  
+  .secao  h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+.caixas {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5vw;
-    flex-wrap: wrap; /* permite quebrar linha em telas muito pequenas */
-}
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .caixa {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+    min-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .texto {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    text-align: center;
+  }
 
-#ecotitulo {
-    font-size: 4vw;
-}
+/* FIM da seção de css gerais */
 
-#globo {
-    height: 4vw;
-    width: auto;
-}
+/*seção de criação EcoScore------------------------------------------------------------------------------*/
 
 /* 📱 Para telas com largura menor que 600px (ex: celular em pé) */
 @media (max-width: 600px) {
@@ -58,32 +103,26 @@
     }
 }
 
-body {
-    background-color: white;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* responsividade para mobile-first */
+#creation-ecoscore{
+    background-color : #f0eeee;
+}
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    flex-wrap: wrap; /* permite quebrar linha em telas muito pequenas */
 }
 
-@media screen and (min-width: 700px) and (max-width: 1500px) {
-    body {
-        background-color: white;
-        /* responsividade para  dispositivos com tela de largura entre 700 e
-1500 pixels */
-    }
+#ecotitulo {
+    font-size: 4vw;
 }
 
-@media screen and (min-width: 1501px) {
-    body {
-        background-color: white;
-        /* responsividade para  dispositivos com tela de largura maior que
-1500 pixels */
-    }
+#globo {
+    height: 4vw;
+    width: auto;
 }
 
-.texto-centro {
-    text-align: center;
-    display: block;
-}
 
 .secao {
 
@@ -125,6 +164,10 @@ body {
 /*FIM da seção de criação EcoScore-----------------------------------------------------------------------*/
 
 /*seção de descriação de serviço*/
+
+
+
+
 /*FIM da seção de de descriação de serviço---------------------------------------------------------------*/
 
 
@@ -143,30 +186,6 @@ body {
     font-weight: bold;
     margin-bottom: 30px;
   }
-  
-  .caixas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  .caixa {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1 1 30%;
-    min-width: 280px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .texto {
-    font-size: 1rem;
-    color: #000;
-    margin-bottom: 8px;
-    line-height: 1.5;
-  }
-  
   .nota {
     color: #ebc60f;
     font-size: 1.2rem;
