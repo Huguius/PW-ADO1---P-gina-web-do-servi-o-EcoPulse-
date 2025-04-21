@@ -63,33 +63,79 @@ body {
     /* efeito de leve crescimento ao passar o mouse */
 }
 
-.quebra {
-    /* quebra de linha de dois px ocupando 100% da largura e preta*/
+.quebra{ /* quebra de linha de dois px ocupando 100% da largura e preta*/
     height: 2px;
     width: 100%;
     background-color: rgb(0, 0, 0);
     border: none;
 }
 
-#rodape {
+#avaliações {
+    padding: 40px;
+    background-color: #f0eeee;
+    text-align: center;
+    border-top: 2.5px solid #222;
+  }
+  
+  #avaliações  h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .caixas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .caixa {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+    min-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .texto {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  .nota {
+    color: #ebc60f;
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .autor {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      flex: 1 1 100%;
+    }
+  }
 
+#rodape{
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1000;
-
 }
-
-#globo {
-    width: auto;
-    height: auto;
-    flex-shrink: 0;
-}
-
-#ecotitulo{
-    font-size: 4vw;
-}
+  
