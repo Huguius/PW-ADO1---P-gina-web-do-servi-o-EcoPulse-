@@ -4,9 +4,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body {
+
+    animation: fadeInUp 1.5s ease-out;
     background-color: white;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /* responsividade para mobile-first */
@@ -30,41 +45,41 @@ body {
 
 .secao {
     padding: 40px;
-    background-color : #f0eeee;
-    text-align:center;
-    border-top:2.5px solid #222;
-  }
-  
-  .secao  h2 {
+    background-color: #f0eeee;
+    text-align: center;
+    border-top: 2.5px solid #222;
+}
+
+.secao h2 {
     text-align: center;
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 30px;
-  }
+}
 
 .caixas {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-  }
-  
-  .caixa {
+}
+
+.caixa {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     flex: 1 1 30%;
     min-width: 280px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .texto {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.texto {
     font-size: 1rem;
     color: #000;
     margin-bottom: 8px;
     line-height: 1.5;
     text-align: center;
-  }
+}
 
 /* FIM da seção de css gerais */
 
@@ -73,22 +88,26 @@ body {
 /* 📱 Para telas com largura menor que 600px (ex: celular em pé) */
 @media (max-width: 600px) {
     #ecotitulo {
-        font-size: 8vw; /* aumenta um pouco proporcionalmente */
+        font-size: 8vw;
+        /* aumenta um pouco proporcionalmente */
     }
 
     #globo {
-        height: 8vw; /* acompanha o novo tamanho */
+        height: 8vw;
+        /* acompanha o novo tamanho */
     }
 
     .logo-titulo {
-        flex-direction: row; /* mantém imagem e texto lado a lado */
+        flex-direction: row;
+        /* mantém imagem e texto lado a lado */
     }
 }
 
 /* 📲 Para telas muito pequenas (menos de 400px) */
 @media (max-width: 400px) {
     .logo-titulo {
-        flex-direction: column; /* empilha imagem em cima do texto */
+        flex-direction: column;
+        /* empilha imagem em cima do texto */
         gap: 1vw;
     }
 
@@ -103,15 +122,17 @@ body {
     }
 }
 
-#creation-ecoscore{
-    background-color : #f0eeee;
+#creation-ecoscore {
+    background-color: #f0eeee;
 }
+
 .logo-titulo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5vw;
-    flex-wrap: wrap; /* permite quebrar linha em telas muito pequenas */
+    flex-wrap: wrap;
+    /* permite quebrar linha em telas muito pequenas */
 }
 
 #ecotitulo {
@@ -154,7 +175,8 @@ body {
     /* efeito de leve crescimento ao passar o mouse */
 }
 
-.quebra{ /* quebra de linha de dois px ocupando 100% da largura e preta*/
+.quebra {
+    /* quebra de linha de dois px ocupando 100% da largura e preta*/
     height: 2px;
     width: 100%;
     background-color: rgb(0, 0, 0);
@@ -165,7 +187,115 @@ body {
 
 /*seção de descriação de serviço*/
 
+#descricao-service {
+    padding: 3rem 1.5rem;
+    background-color: #f5f5f5;
+    border-top: 2px solid #cce7cc;
+    border-bottom: 2px solid #cce7cc;
+    font-family: 'Segoe UI', sans-serif;
+}
 
+.conteudo-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#descricao-service h2,
+#descricao-service h3 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.verde {
+    color: #2ca45a;
+}
+
+#descricao-service p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#descricao-service ul,
+#descricao-service ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#descricao-service li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+#como-funciona {
+    text-align: center;
+    padding: 1rem;
+    border-top: none;
+    /* sem borda verde */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#como-funciona h2 {
+    font-size: 1.4rem;
+    color: #020202;
+    /* cor neutra e elegante */
+    margin-bottom: 1rem;
+}
+
+.passos {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#como-funciona:hover .passos {
+    opacity: 1;
+    max-height: 800px;
+}
+
+.passo {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    color: #333;
+    font-size: 1.1rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.passo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+@media (max-width: 600px) {
+    #descricao-service {
+        padding: 2rem 1rem;
+    }
+
+    #descricao-service h2,
+    #descricao-service h3 {
+        font-size: 1.5rem;
+    }
+
+    #descricao-service p,
+    #descricao-service li {
+        font-size: 1rem;
+    }
+}
 
 
 /*FIM da seção de de descriação de serviço---------------------------------------------------------------*/
@@ -175,38 +305,40 @@ body {
 
 #avaliações {
     padding: 40px;
-    background-color : #f0eeee;
-    text-align:center;
-    border-top:2.5px solid #222;
-  }
-  
-  #avaliações  h2 {
+    background-color: #f0eeee;
+    text-align: center;
+    border-top: 2.5px solid #222;
+}
+
+#avaliações h2 {
     text-align: center;
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 30px;
-  }
-  .nota {
+}
+
+.nota {
     color: #ebc60f;
     font-size: 1.2rem;
     margin: 5px 0;
-  }
-  
-  .autor {
+}
+
+.autor {
     font-size: 0.95rem;
     color: #333;
-  }
-  
+}
+
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
     .cards {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .card {
-      flex: 1 1 100%;
+        flex: 1 1 100%;
     }
-  }
+}
+
 /*FIM da seção de comentários----------------------------------------------------------------------------*/
 
 /*seção de preços----------------------------------------------------------------------------------------*/
@@ -214,7 +346,7 @@ body {
 
 
 /*seção de rodape----------------------------------------------------------------------------------------*/
-#rodape{
+#rodape {
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -223,4 +355,5 @@ body {
     width: 100%;
     z-index: 1000;
 }
+
 /*FIM da seção de rodapé---------------------------------------------------------------------------------*/
