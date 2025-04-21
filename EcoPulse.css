@@ -185,7 +185,7 @@ body {
 
 /*FIM da seção de criação EcoScore-----------------------------------------------------------------------*/
 
-/*seção de descriação de serviço*/
+/*seção de descrição de serviço*/
 
 #descricao-service {
     padding: 3rem 1.5rem;
@@ -342,6 +342,114 @@ body {
 /*FIM da seção de comentários----------------------------------------------------------------------------*/
 
 /*seção de preços----------------------------------------------------------------------------------------*/
+/* Seção de Preços - Planos */
+.planos-container {
+    background-color: #f3f3f3;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+
+
+h2.texto {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.plano {
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%; /* Para garantir que os planos não saiam da grade */
+    max-width: 350px; /* Limita a largura máxima dos planos */
+    margin: 0 auto; /* Centraliza os planos */
+}
+
+.lista-plano li::before{
+    content: "✔️";
+}
+
+/* Aplica a borda verde apenas ao passar o mouse */
+.plano:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.12);
+    border: 2px solid #388e3c; /* Borda verde */
+}
+
+.plano h2 {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
+}
+
+.plano .preco {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.plano ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.plano ul li {
+    margin-bottom: 0.75rem;
+    color: #000000;
+    text-align: left;
+}
+
+.plano .descricao {
+    font-size: 0.95rem;
+    color: #000000;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn.desativado {
+    background-color: #388e3c;
+    cursor: default;
+}
+
+
+.tag {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
 /*FIM da seção de preços---------------------------------------------------------------------------------*/
 
 
