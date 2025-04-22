@@ -25,6 +25,9 @@ body {
     background-color: white;
     font-family: 'Segoe UI', sans-serif;
     /* responsividade para mobile-first */
+    background-image: url('imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 @media screen and (min-width: 700px) and (max-width: 1500px) {
@@ -206,8 +209,6 @@ body {
 #descricao-service {
     padding: 3rem 1.5rem;
     background-color: #f5f5f5;
-    border-top: 2px solid #cce7cc;
-    border-bottom: 2px solid #cce7cc;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -279,7 +280,7 @@ body {
 }
 
 .passo {
-    background-color: #ffffff;
+    background-color: #a0e79a;
     padding: 1rem 1.5rem;
     width: 100%;
     max-width: 600px;
@@ -292,11 +293,10 @@ body {
 }
 
 .passo:hover {
+    background-color: #42e033;
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
-
 
 
 /*FIM da seção de de descriação de serviço---------------------------------------------------------------*/
@@ -307,8 +307,6 @@ body {
 #avaliações {
     padding: 3rem 1.5rem;
     background-color: #f5f5f5;
-    border-top: 2px solid #cce7cc;
-    border-bottom: 2px solid #cce7cc;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -329,6 +327,20 @@ body {
     font-size: 0.95rem;
     color: #333;
 }
+
+.caixa {
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.caixa:hover {
+    background-color: #46dd4e;
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
@@ -352,7 +364,7 @@ body {
     }
 
     .plano {
-        width: 90%;
+        flex: 1 1 100%;
     }
 }
 
@@ -361,7 +373,6 @@ body {
         padding: 2rem 1rem;
     }
 }
-
 
 .titulo-planos {
     width: 100%;
@@ -390,7 +401,6 @@ body {
     background-color: #f3f3f3;
     font-family: 'Segoe UI', sans-serif;
 }
-
 
 .plano {
     background-color: #ffffff;
@@ -491,16 +501,153 @@ body {
 /*FIM da seção de preços---------------------------------------------------------------------------------*/
 
 
-/*seção de rodape----------------------------------------------------------------------------------------*/
+/*seção de FAQ----------------------------------------------------------------------------------------*/
 
-#rodape {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
+.faq {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
 }
 
+.faq h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.faq-item {
+    border: 1px solid #000000;
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    position: relative;
+    font-weight: bold;
+    padding: 1rem 2.5rem 1rem 1rem;
+    /* deixa espaço pro ícone à direita */
+    cursor: pointer;
+    background-color: #aaeb9e5d;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #5dda52;
+}
+
+.faq-question::after {
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' d='M12 4.5v15m7.5-7.5h-15'/></svg>");
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.4s ease;
+    font-weight: normal;
+    font-size: 1rem;
+    color: black;
+}
+
+.faq-question:hover .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 0.5rem;
+}
+
+
+/*FIM da seção de FAQ---------------------------------------------------------------------------------*/
+
+
+/*seção de rodape----------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+    #rodape {
+        padding: 1.2rem 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    #rodape h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #rodape p {
+        font-size: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    #rodape #direito {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1024px) {
+    #rodape {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    #rodape h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    #rodape p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    #rodape #direito {
+        font-size: 0.9rem;
+    }
+}
+
+#rodape {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    margin-top: 2rem;
+}
+
+#rodape h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#rodape p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#rodape #direito {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+#rodape a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#rodape a:hover {
+    text-decoration: underline;
+}
 /*FIM da seção de rodapé---------------------------------------------------------------------------------*/
