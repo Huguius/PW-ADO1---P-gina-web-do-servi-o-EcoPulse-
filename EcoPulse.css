@@ -19,15 +19,45 @@
     }
 }
 
-body {
 
-    animation: fadeInUp 1.5s ease-out;
-    background-color: white;
+body {
+    background-color: #f5f5f5;
+    margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    /* responsividade para mobile-first */
-    background-image: url('imagens/fundo.jpg');
+}
+
+/* ADICIONE um pseudo-elemento para o background fixo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('imagens/imagemfundo.png');
     background-size: cover;
     background-position: center;
+    z-index: -1;
+    /* Mantém atrás de todo conteúdo */
+    opacity: 1;
+}
+
+.secao,
+#descricao-service,
+.planos-container,
+.faq {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    body::before {
+        background-attachment: scroll;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1500px) {
@@ -178,14 +208,6 @@ body {
     /* efeito de leve crescimento ao passar o mouse */
 }
 
-.quebra {
-    /* quebra de linha de dois px ocupando 100% da largura e preta*/
-    height: 2px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    border: none;
-}
-
 /*FIM da seção de criação EcoScore-----------------------------------------------------------------------*/
 
 /*seção de descrição de serviço*/
@@ -304,6 +326,17 @@ body {
 
 /*seção dos comentários----------------------------------------------------------------------------------*/
 
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
 #avaliações {
     padding: 3rem 1.5rem;
     background-color: #f5f5f5;
@@ -338,22 +371,13 @@ body {
 .caixa:hover {
     background-color: #46dd4e;
     transform: scale(1.08) translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px;
 }
 
-
-/* Responsivo para telas menores */
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-    }
-
-    .card {
-        flex: 1 1 100%;
-    }
-}
 
 /*FIM da seção de comentários----------------------------------------------------------------------------*/
+
+
 
 /*seção de preços----------------------------------------------------------------------------------------*/
 /* Seção de Preços - Planos */
@@ -504,7 +528,7 @@ body {
 /*seção de FAQ----------------------------------------------------------------------------------------*/
 
 .faq {
-    max-width: 700px;
+    max-width: 1rem auto;
     margin: 2rem auto;
     padding: 1rem;
     font-family: Arial, sans-serif;
@@ -650,4 +674,5 @@ body {
 #rodape a:hover {
     text-decoration: underline;
 }
+
 /*FIM da seção de rodapé---------------------------------------------------------------------------------*/
