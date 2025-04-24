@@ -1,33 +1,9 @@
-/* ========== BASE ========== */
+/* seção de css gerais */
 * {
+    /* resetando o css para config padrão*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-  }
-  
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-image: url('imagens/imagemfundo.png') ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #333;
-    line-height: 1.6;
-    padding: 1rem;
-    animation: fadeIn 1s ease-in;
-  }
-  
-  /* Animação inicial */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* ========== GERAIS ========== */
-  .secao {
-    padding: 1rem;
-=======
 
 }
 
@@ -102,48 +78,10 @@ body::before {
 
 .secao {
     padding: 40px;
->>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     background-color: #f0eeee;
     text-align: center;
-    border-radius: 15px 15px 0 0;
-    
-  }
-  
-  h1, h2, h4 {
-    color: #000000;
-    text-align: center;
-  }
-  
-  h1 img {
-    width: 32px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
-  .texto {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .verde {
-    color: #22c55e;
-  }
-
-  #ecotitulo {
-    font-size: 4vw;
+    border-top: 2.5px solid #222;
 }
-
-#globo {
-    height: 4vw;
-    width: auto;
-}
-
-.quebra{
-    height: 2px;
-    background-color: #000000;
-    margin: 10px -1rem;
-}
-/* ========== GERAIS ANTIGOS ========== */
 
 .secao h2 {
     text-align: center;
@@ -176,17 +114,85 @@ body::before {
     text-align: center;
 }
 
-/* ========== GERAIS ANTIGOS ========== */
+/* FIM da seção de css gerais */
 
-  
-  /* ========== BOTÃO PRINCIPAL ========== */
-  #btn-create {
+/*seção de criação EcoScore------------------------------------------------------------------------------*/
+
+/* 📱 Para telas com largura menor que 600px (ex: celular em pé) */
+@media (max-width: 600px) {
+    #ecotitulo {
+        font-size: 8vw;
+        /* aumenta um pouco proporcionalmente */
+    }
+
+    #globo {
+        height: 8vw;
+        /* acompanha o novo tamanho */
+    }
+
+    .logo-titulo {
+        flex-direction: row;
+        /* mantém imagem e texto lado a lado */
+    }
+}
+
+/* 📲 Para telas muito pequenas (menos de 400px) */
+@media (max-width: 400px) {
+    .logo-titulo {
+        flex-direction: column;
+        /* empilha imagem em cima do texto */
+        gap: 1vw;
+    }
+
+    #ecotitulo {
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    #globo {
+        height: 9vw;
+        margin-bottom: 1vw;
+    }
+}
+
+#creation-ecoscore {
+    background-color: #f0eeee;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    flex-wrap: wrap;
+    /* permite quebrar linha em telas muito pequenas */
+}
+
+#ecotitulo {
+    font-size: 4vw;
+}
+
+#globo {
+    height: 4vw;
+    width: auto;
+}
+
+
+.secao {
+
+    padding: 40px;
+    background-color: rgb(247, 247, 247)
+}
+
+#btn-create {
     border: 3px solid rgb(0, 0, 0);
     display: block;
-    margin: 30px auto 30px;
+    margin: 30px auto 0;
     padding: 12px 24px;
     border-radius: 10px;
+
     background-color: #4CAF50;
+    /* verde suave */
     color: white;
     font-size: 1rem;
     font-weight: bold;
@@ -201,12 +207,6 @@ body::before {
     transform: scale(1.05);
     /* efeito de leve crescimento ao passar o mouse */
 }
-<<<<<<< HEAD
-  
-  /* ========== CONTEÚDO E PASSOS ========== */
-  .conteudo-container {
-    text-align: left;
-=======
 
 /*FIM da seção de criação EcoScore-----------------------------------------------------------------------*/
 
@@ -235,44 +235,57 @@ body::before {
 }
 
 .conteudo-container {
->>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     max-width: 800px;
     margin: 0 auto;
 }
 
-.conteudo-container h2 {
+#descricao-service h2,
+#descricao-service h3 {
     text-align: center;
     color: #222;
     margin-bottom: 1rem;
 }
-.conteudo-container p  {
+
+.verde {
+    color: #2ca45a;
+}
+
+#descricao-service p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
     margin-bottom: 1rem;
 }
 
-.conteudo-container ul {
+#descricao-service ul,
+#descricao-service ol {
+    margin-left: 1.5rem;
     margin-bottom: 1.5rem;
-    list-style:disc;
-    
 }
 
-.conteudo-container li {
+#descricao-service li {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
 
-  
-  ul {
-    list-style: inside square;
-    padding-left: 1rem;
-  }
+#como-funciona {
+    text-align: center;
+    padding: 1rem;
+    border-top: none;
+    /* sem borda verde */
+    border-radius: 0;
+    box-shadow: none;
+}
 
-  
-  
-  .passos {
+#como-funciona h2 {
+    font-size: 1.4rem;
+    color: #020202;
+    /* cor neutra e elegante */
+    margin-bottom: 1rem;
+}
+
+.passos {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -283,12 +296,13 @@ body::before {
     gap: 1rem;
 }
 
+#como-funciona:hover .passos {
+    opacity: 1;
+    max-height: 800px;
+}
+
 .passo {
-<<<<<<< HEAD
-    background-color: #84d87c;
-=======
     background-color: #a0e79a;
->>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     padding: 1rem 1.5rem;
     width: 100%;
     max-width: 600px;
@@ -301,24 +315,11 @@ body::before {
 }
 
 .passo:hover {
-<<<<<<< HEAD
-    background-color: #22d430;
-=======
     background-color: #42e033;
->>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-<<<<<<< HEAD
-#como-funciona {
-    text-align: center;
-    padding: 1rem;
-    border-top: none;
-    /* sem borda verde */
-    border-radius: 0;
-    box-shadow: none;
-=======
 
 /*FIM da seção de de descriação de serviço---------------------------------------------------------------*/
 
@@ -340,53 +341,21 @@ body::before {
     padding: 3rem 1.5rem;
     background-color: #f5f5f5;
     font-family: 'Segoe UI', sans-serif;
->>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
 }
 
-
-#como-funciona:hover .passos {
-    opacity: 1;
-    max-height: 800px;
-}
-  
-
-<<<<<<< HEAD
-  
-  /* ========== CAIXAS DE AVALIAÇÃO ========== */
-    .avaliacoes{
-    padding-top: 1rem;
-    }
-
-  .caixas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-
-}
-
-.caixa {
-    background-color: #dad9d9;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1 1 30%;
-    min-width: 280px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-    
-}
-
-.texto {
-    font-size: 1rem;
-    color: #000;
-    margin-bottom: 8px;
-    line-height: 1.5;
+#avaliações h2 {
     text-align: center;
-    
-=======
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.nota {
+    color: #ebc60f;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
 .autor {
     font-size: 0.95rem;
     color: #333;
@@ -704,204 +673,6 @@ body::before {
 
 #rodape a:hover {
     text-decoration: underline;
->>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
 }
 
-.caixa:hover {
-    background-color: #ffffff;
-    transform: scale(1.08) translateY(-5px);
-    box-shadow: 0 10px 20px;
-
-}
-  .nota {
-    color: #facc15;
-    font-size: 1.2rem;
-  }
-
- 
-  
-  /* ========== PLANOS ========== */
-  .titulo-planos{
-    padding-top: 2rem;
-}
-.plano h2{
-    text-align: left;
-    color: #2e7d32;
-  }
-
-  .planos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    padding: 4rem 2rem;
-    /* 4rem vertical (top/bottom), 2rem horizontal (left/right) */
-    background-color: #dd6969;
-    font-family: 'Segoe UI', sans-serif;
-    align-items: stretch;
-}
-  
-.plano {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 2rem;
-    width: 100%;
-    max-width: 320px;
-    color: #000;
-    box-shadow: 0 0 0 1px #ddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    flex: 1; 
-    min-height: 400px;
-}
-  
-
-
-
-  
-  .plano:hover {
-    transform: translateY(-5px);
-  }
-
-  .descricao {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
-}
-  
-  .preco {
-    text-align: left;
-    font-size: 1.3rem;
-    color: #000000;
-    font-weight: bold;
-  }
-  
-  .lista-plano {
-    text-align: left;
-    list-style: none;
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding-left: 1.5rem;
-    color: #000;
-  }
-
-  .lista-plano li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #4CAF50;
-}
-  
-  .btn {
-    margin-top: 1rem;
-    display: inline-block;
-    background: #14532d;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .btn:hover {
-    background: #0f3c1f;
-  }
-  
-  .desativado {
-    background: #9ca3af;
-    cursor: not-allowed;
-  }
-  
-  /* ========== FAQ ========== */
-  .faq-item {
-    margin: 1rem 0;
-    padding: 1rem;
-    background: #e0f7eb;
-    border-radius: 8px;
-  }
-  
-  .faq-question {
-    font-weight: bold;
-  }
-  
-  .faq-answer {
-    margin-top: 0.5rem;
-    color: #444;
-  }
-  
-  /* ========== FOOTER ========== */
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #f0fdf4;
-    font-size: 0.9rem;
-    color: #555;
-    border-top: 1px solid #ccc;
-  }
-  
-  footer a {
-    color: #22c55e;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ========== RESPONSIVIDADE ========== */
-  
-  /* Tablets (a partir de 768px) */
-  @media (min-width: 768px) {
-    .passos {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  
-    .passo {
-      flex: 0 0 48%;
-    }
-  
-    .caixas {
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  
-    .caixa {
-      flex: 1 0 30%;
-    }
-  
-    .plano {
-      width: 100%;
-    }
-  
-    .plano + .plano {
-      margin-top: 2rem;
-    }
-  }
-  
-  /* Desktop (a partir de 1024px) */
-  @media (min-width: 1024px) {
-    body {
-      max-width: 1200px;
-      margin: auto;
-    }
-  
-    .plano {
-      display: inline-block;
-      width: 30%;
-      margin: 1.5%;
-      vertical-align: top;
-    }
-  
-    .conteudo-container {
-      padding: 2rem;
-    }
-  }
-  
+/*FIM da seção de rodapé---------------------------------------------------------------------------------*/
