@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
   }
   
   
@@ -26,6 +27,82 @@
   /* ========== GERAIS ========== */
   .secao {
     padding: 1rem;
+=======
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ADICIONE um pseudo-elemento para o background fixo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('imagens/imagemfundo.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* Mantém atrás de todo conteúdo */
+    opacity: 1;
+}
+
+.secao,
+#descricao-service,
+.planos-container,
+.faq {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    body::before {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1500px) {
+    body {
+        background-color: white;
+        /* responsividade para  dispositivos com tela de largura entre 700 e
+1500 pixels */
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    body {
+        background-color: white;
+        /* responsividade para  dispositivos com tela de largura maior que
+1500 pixels */
+    }
+}
+
+.secao {
+    padding: 40px;
+>>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     background-color: #f0eeee;
     text-align: center;
     border-radius: 15px 15px 0 0;
@@ -124,10 +201,41 @@
     transform: scale(1.05);
     /* efeito de leve crescimento ao passar o mouse */
 }
+<<<<<<< HEAD
   
   /* ========== CONTEÚDO E PASSOS ========== */
   .conteudo-container {
     text-align: left;
+=======
+
+/*FIM da seção de criação EcoScore-----------------------------------------------------------------------*/
+
+/*seção de descrição de serviço*/
+
+@media (max-width: 600px) {
+    #descricao-service {
+        padding: 2rem 1rem;
+    }
+
+    #descricao-service h2,
+    #descricao-service h3 {
+        font-size: 1.5rem;
+    }
+
+    #descricao-service p,
+    #descricao-service li {
+        font-size: 1rem;
+    }
+}
+
+#descricao-service {
+    padding: 3rem 1.5rem;
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.conteudo-container {
+>>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     max-width: 800px;
     margin: 0 auto;
 }
@@ -176,7 +284,11 @@
 }
 
 .passo {
+<<<<<<< HEAD
     background-color: #84d87c;
+=======
+    background-color: #a0e79a;
+>>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     padding: 1rem 1.5rem;
     width: 100%;
     max-width: 600px;
@@ -189,11 +301,16 @@
 }
 
 .passo:hover {
+<<<<<<< HEAD
     background-color: #22d430;
+=======
+    background-color: #42e033;
+>>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+<<<<<<< HEAD
 #como-funciona {
     text-align: center;
     padding: 1rem;
@@ -201,6 +318,29 @@
     /* sem borda verde */
     border-radius: 0;
     box-shadow: none;
+=======
+
+/*FIM da seção de de descriação de serviço---------------------------------------------------------------*/
+
+
+/*seção dos comentários----------------------------------------------------------------------------------*/
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+#avaliações {
+    padding: 3rem 1.5rem;
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+>>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
 }
 
 
@@ -210,6 +350,7 @@
 }
   
 
+<<<<<<< HEAD
   
   /* ========== CAIXAS DE AVALIAÇÃO ========== */
     .avaliacoes{
@@ -245,6 +386,325 @@
     line-height: 1.5;
     text-align: center;
     
+=======
+.autor {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.caixa {
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.caixa:hover {
+    background-color: #46dd4e;
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 20px;
+}
+
+
+/*FIM da seção de comentários----------------------------------------------------------------------------*/
+
+
+
+/*seção de preços----------------------------------------------------------------------------------------*/
+/* Seção de Preços - Planos */
+@media (max-width: 768px) {
+    .planos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plano {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .planos-container {
+        padding: 2rem 1rem;
+    }
+}
+
+.titulo-planos {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titulo-planos h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.titulo-planos .verde {
+    color: #2ca45a;
+}
+
+
+.planos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 4rem 2rem;
+    /* 4rem vertical (top/bottom), 2rem horizontal (left/right) */
+    background-color: #f3f3f3;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.plano {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 320px;
+    color: #000;
+    box-shadow: 0 0 0 1px #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.plano:hover {
+    box-shadow: 0 0 0 2px #4CAF50;
+    transform: translateY(-6px);
+}
+
+.plano h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2e7d32;
+    text-align: left;
+}
+
+
+.preco {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.lista-plano {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.lista-plano li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #000;
+}
+
+.lista-plano li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+.descricao {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #0b4e0f;
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn.desativado {
+    background-color: #bdbdbd;
+    color: #fff;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+/*FIM da seção de preços---------------------------------------------------------------------------------*/
+
+
+/*seção de FAQ----------------------------------------------------------------------------------------*/
+
+.faq {
+    max-width: 1rem auto;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.faq h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.faq-item {
+    border: 1px solid #000000;
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    position: relative;
+    font-weight: bold;
+    padding: 1rem 2.5rem 1rem 1rem;
+    /* deixa espaço pro ícone à direita */
+    cursor: pointer;
+    background-color: #aaeb9e5d;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #5dda52;
+}
+
+.faq-question::after {
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' d='M12 4.5v15m7.5-7.5h-15'/></svg>");
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.4s ease;
+    font-weight: normal;
+    font-size: 1rem;
+    color: black;
+}
+
+.faq-question:hover .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 0.5rem;
+}
+
+
+/*FIM da seção de FAQ---------------------------------------------------------------------------------*/
+
+
+/*seção de rodape----------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+    #rodape {
+        padding: 1.2rem 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    #rodape h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #rodape p {
+        font-size: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    #rodape #direito {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1024px) {
+    #rodape {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    #rodape h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    #rodape p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    #rodape #direito {
+        font-size: 0.9rem;
+    }
+}
+
+#rodape {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    margin-top: 2rem;
+}
+
+#rodape h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#rodape p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#rodape #direito {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+#rodape a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#rodape a:hover {
+    text-decoration: underline;
+>>>>>>> d1d803ad8530178afa7ed699397d651242d621f2
 }
 
 .caixa:hover {
