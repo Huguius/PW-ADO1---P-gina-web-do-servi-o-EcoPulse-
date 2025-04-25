@@ -11,8 +11,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #333;
-  line-height: 1.6;
-  padding: 1rem;
   animation: fadeIn 1s ease-in;
 }
 
@@ -80,30 +78,6 @@ h1 img {
   margin-bottom: 30px;
 }
 
-.caixas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.caixa {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  flex: 1 1 30%;
-  min-width: 280px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.texto {
-  font-size: 1rem;
-  color: #000;
-  margin-bottom: 8px;
-  line-height: 1.5;
-  text-align: center;
-}
-
 /* ========== BOTÃO PRINCIPAL ========== */
 #btn-create {
   border: 3px solid rgb(0, 0, 0);
@@ -146,7 +120,7 @@ h1 img {
   margin-bottom: 1rem;
 }
 
-ul {
+.conteudo-container ul {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -245,32 +219,34 @@ ul {
 
 /* ========== PLANOS ========== */
 
-.planos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 4rem 2rem;
-  background-color: #f3f3f3;
-  font-family: 'Segoe UI', sans-serif;
+@media (max-width: 768px) {
+  .plano {
+    max-width: 100%;
+    margin: 20px;
+    max-height: fit-content;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .plano {
+    max-width: 100%;
+    margin: 20px;
+    max-height: fit-content;
+  }
+}
+
+
 .plano {
-  background-color: #ffffff;
   border-radius: 12px;
   padding: 2rem;
-  max-width: 400px;
-  color: #000;
-  box-shadow: 0 0 0 1.6px #969696;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 0 3px #000000;
+  height: 500px;
 }
 
 .plano:hover {
-  box-shadow: 0 0 0 2px #4CAF50;
-  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgb(2, 253, 44);
+  transform: translateY(-10px) scale(1.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .plano h2 {
@@ -289,15 +265,15 @@ ul {
 
 .lista-plano {
   list-style: none;
-
 }
+
 
 .lista-plano li {
   margin-bottom: 0.75rem;
   position: relative;
   padding-left: 1.5rem;
   color: #000;
-  text-align: justify;
+  text-align: left;
 }
 
 .lista-plano li::before {
@@ -316,6 +292,7 @@ ul {
 }
 
 .btn {
+
   width: 100%;
   padding: 0.9rem 1.2rem;
   background-color: #4CAF50;
@@ -441,4 +418,3 @@ footer a:hover {
     padding: 2rem;
   }
 }
-
